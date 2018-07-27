@@ -6,6 +6,13 @@
 		<div>
 			<h1><a href="/webapp">Take a poll!</a></h1>
 		</div>
+		{% for post in posts %}
+			<div>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>published: {{ post.published_date }}</p>
+				<p>{{ post.text|linebreaksbr }}</p>
+			<div>
+		{% endfor %}
 		<div>
 			<h2>YOOOOOO</h2>
 			<h1><a href="/person">Different examply page</a></h1>
@@ -13,6 +20,10 @@
 			<p>lmao cool</p>
 		</div>
 		<div>
+			<h2>This is a list of blog posts which exist here</h2>
+			{% for post in posts %}
+				{{ post }}
+			{% endfor %}
 			<p>Here is some more text in the third division tag</p>
 		</div>
 	</body>
